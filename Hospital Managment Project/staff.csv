@@ -1,32 +1,31 @@
-StaffID,Name,Role,Phone,Salary
-1,Dr Usman,Doctor,03110000001,150000
-2,Dr Bilal,Doctor,03110000002,140000
-3,Dr Hamza,Doctor,03110000003,135000
-4,Dr Ayesha,Doctor,03110000004,145000
-5,Dr Sana,Doctor,03110000005,142000
-6,Dr Farhan,Doctor,03110000006,138000
-7,Dr Ali,Doctor,03110000007,136000
-8,Dr Fatima,Doctor,03110000008,144000
-9,Dr Kamran,Doctor,03110000009,137000
-10,Dr Hira,Doctor,03110000010,139000
-11,Dr Imran,Doctor,03110000011,141000
-12,Dr Laiba,Doctor,03110000012,135000
-13,Dr Shahid,Doctor,03110000013,140000
-14,Dr Maria,Doctor,03110000014,143000
-15,Dr Adeel,Doctor,03110000015,138000
-16,Dr Mehak,Doctor,03110000016,136000
-17,Dr Salman,Doctor,03110000017,145000
-18,Dr Komal,Doctor,03110000018,137000
-19,Dr Zain,Doctor,03110000019,142000
-20,Dr Sana Noor,Doctor,03110000020,139000
-21,Nurse Hina,Nurse,03110000021,60000
-22,Nurse Areeba,Nurse,03110000022,58000
-23,Nurse Sana,Nurse,03110000023,61000
-24,Nurse Laiba,Nurse,03110000024,59000
-25,Nurse Maria,Nurse,03110000025,60000
-26,Nurse Komal,Nurse,03110000026,58000
-27,Technician Ali,Lab Tech,03110000027,50000
-28,Technician Ahmed,Lab Tech,03110000028,50000
-29,Technician Farhan,Lab Tech,03110000029,50000
-30,Receptionist Ayesha,Reception,03110000030,45000
-31,Dr Sumaiya,Reception,03110000030,45000
+StaffID,Name,Role,Specialty,Phone,Salary
+1,Dr Usman,Doctor,General Physician,03110000001,150000
+2,Dr Bilal,Doctor,Cardiologist,03110000002,140000
+3,Dr Hamza,Doctor,Neurologist,03110000003,135000
+4,Dr Ayesha,Doctor,Pediatrician,03110000004,145000
+5,Dr Sana,Doctor,Dermatologist,03110000005,142000
+6,Dr Farhan,Doctor,ENT Specialist,03110000006,138000
+7,Dr Ali,Doctor,Orthopedic,03110000007,136000
+8,Dr Fatima,Doctor,General Physician,03110000008,144000
+9,Dr Kamran,Doctor,Cardiologist,03110000009,137000
+10,Dr Hira,Doctor,Pediatrician,03110000010,139000
+11,Dr Imran,Doctor,Neurologist,03110000011,141000
+12,Dr Laiba,Doctor,Dermatologist,03110000012,135000
+13,Dr Shahid,Doctor,ENT Specialist,03110000013,140000
+14,Dr Maria,Doctor,Orthopedic,03110000014,143000
+15,Dr Adeel,Doctor,General Physician,03110000015,138000
+16,Dr Mehak,Doctor,Cardiologist,03110000016,136000
+17,Dr Salman,Doctor,Pediatrician,03110000017,145000
+18,Dr Komal,Doctor,Dermatologist,03110000018,137000
+19,Dr Zain,Doctor,ENT Specialist,03110000019,142000
+20,Dr Sana Noor,Doctor,Orthopedic,03110000020,139000
+21,Nurse Hina,Nurse,,03110000021,60000
+22,Nurse Areeba,Nurse,,03110000022,58000
+23,Nurse Sana,Nurse,,03110000023,61000
+24,Nurse Laiba,Nurse,,03110000024,59000
+25,Nurse Maria,Nurse,,03110000025,60000
+26,Nurse Komal,Nurse,,03110000026,58000
+27,Technician Ali,Lab Tech,,03110000027,50000
+28,Technician Ahmed,Lab Tech,,03110000028,50000
+29,Technician Farhan,Lab Tech,,03110000029,50000
+30,Receptionist Ayesha,Reception,,03110000030,45000
