@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Calibri', sans-serif; line-height: 1.6; margin: 40px; }
+        h1 { text-align: center; color: #2F5496; text-decoration: underline; }
+        .query-section { margin-bottom: 50px; }
+        .label { font-weight: bold; font-size: 1.2em; }
+        .sql-box { background-color: #F2F2F2; padding: 15px; border: 1px solid #D9D9D9; font-family: 'Consolas', monospace; margin: 10px 0; }
+        .screenshot-placeholder { border: 2px dashed #BFBFBF; height: 300px; display: flex; align-items: center; justify-content: center; color: #7F7F7F; margin: 20px auto; width: 80%; text-align: center; }
+        .caption { text-align: center; font-style: italic; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Hospital Management System – SQL Queries and Results</h1>
+
+    <!-- Query 1 -->
+    <div class="query-section">
+        <p class="label">Query 1: List all female patients over 20 years old.</p>
+        <div class="sql-box">
+            SELECT PatientID, Name, Age, Gender, Phone, Address<br>
+            FROM Patient<br>
+            WHERE Gender = 'Female' AND Age > 20;
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 1: This screenshot shows the output of my query listing female patients older than 20 years.</p>
+    </div>
+
+    <!-- Query 2 -->
+    <div class="query-section">
+        <p class="label">Query 2: List all available (Free) beds in the 'General' ward.</p>
+        <div class="sql-box">
+            SELECT BedNumber, WardType, Status<br>
+            FROM bed<br>
+            WHERE Status = 'Free' AND WardType = 'General';
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 2: This screenshot shows the output of my query listing available beds in the General ward.</p>
+    </div>
+
+    <!-- Query 3 -->
+    <div class="query-section">
+        <p class="label">Query 3: Display all staff members who are Doctors with their specialties and salaries.</p>
+        <div class="sql-box">
+            SELECT Name, Specialty, Salary<br>
+            FROM staff<br>
+            WHERE Role = 'Doctor';
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 3: This screenshot shows the output of my query listing doctors and their professional details.</p>
+    </div>
+
+    <!-- Query 4 -->
+    <div class="query-section">
+        <p class="label">Query 4: List all medicines with a price greater than 100, sorted by price.</p>
+        <div class="sql-box">
+            SELECT Medicine, Manufacturer, Price<br>
+            FROM medicine<br>
+            WHERE Price > 100<br>
+            ORDER BY Price DESC;
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 4: This screenshot shows the output of my query listing premium medicines.</p>
+    </div>
+
+    <!-- Query 5 -->
+    <div class="query-section">
+        <p class="label">Query 5: Show patient names and their respective diagnoses from the medical records.</p>
+        <div class="sql-box">
+            SELECT p.Name AS PatientName, m.Diagnosis, m.AdmissionDate<br>
+            FROM Patient p<br>
+            INNER JOIN [Medical-record] m ON p.PatientID = m.PatientID;
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 5: This screenshot shows the output of my query showing patient treatment history.</p>
+    </div>
+
+</body>
+</html>
