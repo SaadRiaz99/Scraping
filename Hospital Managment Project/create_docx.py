@@ -39,6 +39,36 @@ def create_hms_doc():
             "desc": "Show patient names and their respective diagnoses from the medical records.",
             "sql": "SELECT p.Name AS PatientName, m.Diagnosis, m.AdmissionDate\nFROM Patient p\nINNER JOIN [Medical-record] m ON p.PatientID = m.PatientID;",
             "caption": "Figure 5: This screenshot shows the output of my query showing patient treatment history."
+        },
+        {
+            "num": 6,
+            "desc": "Search for all staff members who have 'Physician' in their specialty.",
+            "sql": "SELECT Name, Specialty\nFROM staff\nWHERE Specialty LIKE '*Physician*';",
+            "caption": "Figure 6: Using the * wildcard to find any specialty containing the word 'Physician'."
+        },
+        {
+            "num": 7,
+            "desc": "List patients whose phone numbers start with '0300'.",
+            "sql": "SELECT Name, Phone\nFROM Patient\nWHERE Phone LIKE '0300*';",
+            "caption": "Figure 7: Using the * wildcard at the end to match prefixes."
+        },
+        {
+            "num": 8,
+            "desc": "Find medicines that start with letters A through M.",
+            "sql": "SELECT Medicine, Price\nFROM medicine\nWHERE Medicine LIKE '[A-M]*';",
+            "caption": "Figure 8: Using character ranges [A-M] to filter results alphabetically."
+        },
+        {
+            "num": 9,
+            "desc": "Find all Doctors whose names end with 'an'.",
+            "sql": "SELECT Name\nFROM staff\nWHERE Name LIKE 'Dr *an';",
+            "caption": "Figure 9: Using the * wildcard at the beginning to match suffixes."
+        },
+        {
+            "num": 10,
+            "desc": "Search for all medicines that contain 'cin' in their name.",
+            "sql": "SELECT Medicine, Price\nFROM medicine\nWHERE Medicine LIKE '*cin*';",
+            "caption": "Figure 10: Using double wildcards to find a substring anywhere in the name."
         }
     ]
 

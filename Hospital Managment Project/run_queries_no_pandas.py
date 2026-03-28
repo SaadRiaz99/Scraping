@@ -40,7 +40,15 @@ queries = [
     ("Free General Beds", "SELECT BedNumber, WardType, Status FROM bed WHERE Status = 'Free' AND WardType = 'General'"),
     ("Doctors & Salaries", "SELECT Name, Specialty, Salary FROM staff WHERE Role = 'Doctor'"),
     ("Medicines > 100", "SELECT Medicine, Manufacturer, Price FROM medicine WHERE CAST(Price AS INTEGER) > 100 ORDER BY CAST(Price AS INTEGER) DESC"),
-    ("Patient Diagnoses", "SELECT p.Name AS PatientName, m.Diagnosis, m.AdmissionDate FROM Patient p INNER JOIN Medical_record m ON p.PatientID = m.PatientID")
+    ("Patient Diagnoses", "SELECT p.Name AS PatientName, m.Diagnosis, m.AdmissionDate FROM Patient p INNER JOIN Medical_record m ON p.PatientID = m.PatientID"),
+
+    # New Wildcard Queries (SQLite syntax: % instead of *, _ instead of ?)
+    ("Specialists (Physicians)", "SELECT Name, Specialty FROM staff WHERE Specialty LIKE '%Physician%'"),
+    ("Patients (0300 prefix)", "SELECT Name, Phone FROM Patient WHERE Phone LIKE '0300%'"),
+    ("Medicines (A-M)", "SELECT Medicine, Price FROM medicine WHERE Medicine GLOB '[A-M]*'"),
+    ("Staff (Name pattern: Dr ?a*)", "SELECT Name, Role FROM staff WHERE Name LIKE 'Dr _a%'"),
+    ("Doctors (Ending in 'an')", "SELECT Name FROM staff WHERE Name LIKE 'Dr %an'"),
+    ("Medicines (Containing 'cin')", "SELECT Medicine FROM medicine WHERE Medicine LIKE '%cin%'")
 ]
 
 # Execute and print results

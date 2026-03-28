@@ -87,5 +87,75 @@
         <p class="caption">Figure 5: This screenshot shows the output of my query showing patient treatment history.</p>
     </div>
 
+    <!-- Query 6 (Wildcard) -->
+    <div class="query-section">
+        <p class="label">Query 6: Search for all staff members who have 'Physician' in their specialty.</p>
+        <div class="sql-box">
+            SELECT Name, Specialty<br>
+            FROM staff<br>
+            WHERE Specialty LIKE "*Physician*";
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 6: Using the * wildcard to find any specialty containing the word 'Physician'.</p>
+    </div>
+
+    <!-- Query 7 (Wildcard) -->
+    <div class="query-section">
+        <p class="label">Query 7: List patients whose phone numbers start with '0300'.</p>
+        <div class="sql-box">
+            SELECT Name, Phone<br>
+            FROM Patient<br>
+            WHERE Phone LIKE "0300*";
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 7: Using the * wildcard at the end to match prefixes.</p>
+    </div>
+
+    <!-- Query 8 (Wildcard) -->
+    <div class="query-section">
+        <p class="label">Query 8: Find medicines that start with letters A through M.</p>
+        <div class="sql-box">
+            SELECT Medicine, Price<br>
+            FROM medicine<br>
+            WHERE Medicine LIKE "[A-M]*";
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 8: Using character ranges [A-M] to filter results alphabetically.</p>
+    </div>
+
+    <!-- Query 9 (Wildcard) -->
+    <div class="query-section">
+        <p class="label">Query 9: Find all Doctors whose names end with 'an'.</p>
+        <div class="sql-box">
+            SELECT Name<br>
+            FROM staff<br>
+            WHERE Name LIKE "Dr *an";
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 9: Using the * wildcard at the beginning to match suffixes.</p>
+    </div>
+
+    <!-- Query 10 (Wildcard) -->
+    <div class="query-section">
+        <p class="label">Query 10: Search for all medicines that contain 'cin' in their name.</p>
+        <div class="sql-box">
+            SELECT Medicine, Price<br>
+            FROM medicine<br>
+            WHERE Medicine LIKE "*cin*";
+        </div>
+        <div class="screenshot-placeholder">
+            [PASTE SCREENSHOT HERE (Ctrl+V)]
+        </div>
+        <p class="caption">Figure 10: Using double wildcards to find a substring anywhere in the name.</p>
+    </div>
+
 </body>
 </html>
